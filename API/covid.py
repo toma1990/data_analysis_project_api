@@ -27,7 +27,7 @@ def flight_airports(icao24):
 #county data for covid cases
 @app.route('/covid/counties/<areaCode>')
 def counties(areaCode):
-    with open('./flight-data-airports.json', 'r') as jsonfile:
+    with open('./covid-data-county.json', 'r') as jsonfile:
         file_data = json.loads(jsonfile.read())
     return json.dumps(file_data[areaCode])
 
